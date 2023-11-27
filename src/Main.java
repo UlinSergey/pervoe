@@ -1,78 +1,56 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание №1");
-       int clientOS = 0;
-        if (clientOS == 0){
-            System.out.println("Установите версию приложения для iOS по ссылке");
-        } else{
-            System.out.println("Установите версию приложения для Android по ссылке");
+        for (int i = 1; i <= 10; i = i + 1) {
+            System.out.println(i);
         }
 
         System.out.println("Задание №2");
-         clientOS = 1;
-         int clientDeviceYear = 2023;
-         if (clientOS==1 && clientDeviceYear<2015){
-             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-         } else if (clientOS==1 && clientDeviceYear>=2015) {
-             System.out.println("Установите версию приложения для iOS по ссылке");
-         }else if (clientOS==0 && clientDeviceYear<2015) {
-             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-         }else if (clientOS==0 && clientDeviceYear>=2015) {
-             //Можно как понимаю указать последнее условие без (if (clientOS==0 && clientDeviceYear>=2015))
-             System.out.println("Установите версию приложения для Android по ссылке");
-         }
-
+        for (int i = 10; i > 0; i = i - 1) {
+            System.out.println(i);
+        }
         System.out.println("Задание №3");
-         int year=800;
-        //Задал 800 для проверки
-         if (year % 4==0 && year % 100!=0 && year>1584 || year % 400==0 && year>1584){
-             // Указал 2 раза year>1584, иначе значение 800 являеться весокостным
-             System.out.println(year+" год является високосным");
-         } else {
-             System.out.println(year+" год не является високосным");
-         }
-
+        for (int i = 0; i <= 17; i = i + 2) {
+            //Нуль не может быть как четной так и нечетной поэтому будь бы чуть другие условия использовал бы:
+            //for (int i = 2; i <= 17; i = i + 2) {
+            System.out.println(i);
+        }
         System.out.println("Задание №4");
-         int deliveryDistance = 95;
-         if (deliveryDistance <=20){
-             System.out.println("Потребуется дней: "+"одни сутки");
-             //звучит очень странно но если отпираться от условий
-         } else if (deliveryDistance>20 && deliveryDistance<60 ) {
-             System.out.println("Потребуется дней: "+"двое суток");
-         }else if (deliveryDistance>60 && deliveryDistance<100 ) {
-             System.out.println("Потребуется дней: " + "трое суток");
-         }else {
-             System.out.println("доставки нет");
-         }
-
+        for (int i = 10; i >=-10; i = i -1) {
+            System.out.println(i);
+        }
         System.out.println("Задание №5");
-         int month= 11;
-         if (month>0 && month<13){
-             switch (month){
-                 case 12:
-                 case 1:
-                 case 2:
-                     System.out.println("Зима");
-                 break;
-                 case 3:
-                 case 4:
-                 case 5:
-                     System.out.println("Весна");
-                     break;
-                 case 6:
-                 case 7:
-                 case 8:
-                     System.out.println("Лето");
-                     break;
-                 case 9:
-                 case 10:
-                 case 11:
-                     System.out.println("Осень");
-                     break;
-             }
-         }else {
-             System.out.println("Всего 12 месяцев! Проверь данные");
-
-         }
+        for (int i = 1904; i <=2096; i = i +4) {
+            System.out.println(i+"  год является високосным");
+        }
+        System.out.println("Задание №6");
+        for (int i = 7; i <= 98; i = i + 7) {
+            System.out.println(i);
+        }
+        System.out.println("Задание №7");
+        for (int i = 1; i <= 1000; i = i * 2) {
+            //Ввел значение i <= 1000, интереса ради но так как программа работает так как надо оставил
+            System.out.println(i);
+        }
+        System.out.println("Задание №8");
+        int salary = 29000;
+        int total = 0;
+        for (int i = 1; i <= 12; i++) {
+            total = total + salary;
+        System.out.println("Месяц "+ i +", сумма накоплений равна "+total+" рублей");
+        }
+        System.out.println("Задание №9");
+         salary = 29000;
+         total = 0;
+        for (int i = 1; i <= 12; i++) {
+            total = total + total/100;
+            total = total + salary;
+            System.out.println("Месяц "+ i +", сумма накоплений равна "+total+" рублей");
+        }
+        System.out.println("Задание №10");
+        int number = 2;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(number + "*" + i + "=" + (number * i));
+        }
     }
 }
